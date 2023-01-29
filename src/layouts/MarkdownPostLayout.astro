@@ -1,0 +1,13 @@
+---
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <p>Written by: {frontmatter.author}</p>
+  <slot />
+</BaseLayout>

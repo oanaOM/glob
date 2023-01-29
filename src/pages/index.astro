@@ -1,0 +1,28 @@
+---
+import CommandMenu from "../components/react/CommandBar";
+import DogCard from "../components/react/DogCard";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const allPosts  = await Astro.glob("../pages/posts/*.mdx")
+
+const pageTitle = "Home page";
+
+
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div>
+    <h1>Hello Reader!</h1>
+    <!-- TODO: fix the command Menu -->
+    <!-- <CommandMenu client:only posts={allPosts}/> -->
+    <DogCard client:only="react"/>
+  </div>
+</BaseLayout>
+
+<style>
+  div {
+    text-align: center;
+  }
+  button {
+    display: block;
+  }
+</style>

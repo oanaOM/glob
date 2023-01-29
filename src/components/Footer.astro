@@ -1,0 +1,27 @@
+---
+import Social from "./Social.astro";
+
+const medias = [
+  { name: "Twitter", username: "oanamondy" },
+  { name: "github", username: "oanaOM" },
+];
+---
+
+<footer>
+  <p>A twisted blog build with Astro and ♥</p>
+  <div class="social-container">
+    {
+      medias.map((media) => (
+        <Social platform={media.name} username={media.username} />
+      ))
+    }
+  </div>
+</footer>
+
+<style>
+  .social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+</style>

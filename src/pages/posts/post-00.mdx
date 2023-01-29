@@ -1,0 +1,39 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Notes about Astro"
+author: "Oana OM" 
+tags: ["astro", "html", "js", "css", "server-side-rendering"]
+---
+
+# Astro
+
+[official docs](https://docs.astro.build/en/concepts/mpa-vs-spa/)
+
+Multi-Page Application (MPA) framework.
+- multi HTML pages rendered on the server-side
+- routing login lives in the server
+- use [Turbo](https://turbo.hotwired.dev/) for offering a seamless transitions between pages 
+- server state management
+
+Trade off vs. SPA
+- renders slower the second, third page load
+
+**Astro Island**
+- component islands
+- always renders in isolation
+- build on <u><i>partial</i></u> or <u><i>selective hydration</i></u>
+- only loads JS for components that need it
+- parallel loading
+- you controll how and when to render each component
+
+
+**Sharing state**
+- [Nano Stores](https://github.com/nanostores/nanostores/discussions) - shared client-side storage
+
+
+
+With TypeScript: configure *astro.config.mjs* [doc](https://docs.astro.build/en/guides/configuring-astro/#the-astro-config-file)
+
+
+Astro is very cool! 
+

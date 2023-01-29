@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import "../styles/global.css";
+
+const pageTitle = "About OM";
+
+const hobbies = ["visuals", "nature", "crocheting", "cycling", " mechanical keyboard"];
+
+const headingColour = "purple";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <main>
+    <h1>Hey! I'm Oana 👋 </h1>
+    <p>Welcome to my golb, virtual garden or however you want to call it. </p>
+    <h2>Things I like do when I'm not typing</h2>
+    <ul>
+      {hobbies.map((hobbie) => <li class="hobbie">{hobbie}</li>)}
+    </ul>
+  </main>
+</BaseLayout>
+
+<style define:vars={{ headingColour }}>
+  h1 {
+    color: var(--headingColour);
+    font-size: 4rem;
+  }
+</style>
