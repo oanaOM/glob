@@ -1,4 +1,4 @@
-#  Golb - a twisted blog build with Astro
+#  Golb - a twisted blog built with Astro
 
 Built following the official Astro [tutorial](https://docs.astro.build/en/tutorial/0-introduction/)
 
